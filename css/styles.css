@@ -1,0 +1,156 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background-color: #ff7a7a;
+  background-image: url(/images/bg-intro-desktop.png);
+  font-weight: 300;
+  font-size: 1.5rem; }
+  @media only screen and (max-width: 50em) {
+    body {
+      font-size: 1.3rem; } }
+  @media only screen and (max-width: 25em) {
+    body {
+      background-image: url(/images/bg-intro-mobile.png);
+      font-size: 1.2 0.4rem; } }
+
+#container {
+  padding: 6rem 12rem;
+  max-width: 1440px;
+  margin: auto; }
+  @media only screen and (max-width: 68.75em) {
+    #container {
+      padding: 4rem 7.5rem; } }
+  @media only screen and (max-width: 50em) {
+    #container {
+      padding: 3rem 4rem; } }
+  @media only screen and (max-width: 25em) {
+    #container {
+      padding: 2.7rem; } }
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-content: center; }
+  @media only screen and (max-width: 50em) {
+    .content {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, auto);
+      grid-row-gap: 4rem; } }
+  .content__intro {
+    align-self: center; }
+    @media only screen and (max-width: 50em) {
+      .content__intro {
+        text-align: center; } }
+    .content__intro--heading {
+      line-height: 1.2;
+      font-weight: 600;
+      font-size: 4.2rem;
+      margin-bottom: 2rem; }
+      @media only screen and (max-width: 25em) {
+        .content__intro--heading {
+          font-size: 3.8rem; } }
+  .content__form {
+    width: 90%;
+    justify-self: end; }
+    @media only screen and (max-width: 50em) {
+      .content__form {
+        margin: auto; } }
+    @media only screen and (max-width: 25em) {
+      .content__form {
+        width: 100%; } }
+    .content__form--offer {
+      background-color: #6055a5;
+      width: 100%;
+      padding: 1.5rem 0;
+      border-radius: 5px;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: 500;
+      box-shadow: 0 6px 1px rgba(0, 0, 0, 0.2); }
+      .content__form--offer span {
+        color: #b9b6d3;
+        font-weight: 300; }
+    .content__form--container {
+      background-color: #fff;
+      width: 100%;
+      border-radius: 5px;
+      padding: 3rem;
+      box-shadow: 0 6px 1px rgba(0, 0, 0, 0.2); }
+      @media only screen and (max-width: 25em) {
+        .content__form--container {
+          padding: 3rem 2rem; } }
+    .content__form--control {
+      position: relative;
+      margin-bottom: 1.3rem;
+      padding-bottom: 2rem; }
+      .content__form--control span {
+        position: absolute;
+        bottom: 10;
+        right: 0;
+        visibility: hidden; }
+      .content__form--control.success input {
+        border-color: #38cc8c; }
+      .content__form--control.success .green-check {
+        visibility: visible; }
+      .content__form--control.error input {
+        border-color: #ff7a7a; }
+      .content__form--control.error .red-check {
+        visibility: visible; }
+      .content__form--control.error span {
+        font-weight: 200;
+        color: #ff7a7a;
+        visibility: visible; }
+    .content__form--input {
+      display: block;
+      font-weight: 200;
+      width: 100%;
+      padding: 1.3rem 0;
+      padding-left: 1.5rem;
+      border: 1.2px solid #000;
+      border-radius: 5px; }
+      .content__form--input:-webkit-autofill, .content__form--input:-webkit-autofill:hover, .content__form--input:-webkit-autofill:focus, .content__form--input:-webkit-autofill:active {
+        box-shadow: 0 0 0 30px white inset !important; }
+    .content__form--btn {
+      background-color: #38cc8c;
+      color: #fff;
+      text-transform: uppercase;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 5px;
+      border: none;
+      padding: 1.3rem 0;
+      margin-bottom: 2rem;
+      box-shadow: 0 6px 1px rgba(0, 0, 0, 0.2); }
+    .content__form--text {
+      color: #b9b6d3;
+      font-weight: 300;
+      font-size: 1.2rem;
+      text-align: center; }
+      .content__form--text span {
+        color: #ff7a7a; }
+
+.green-check {
+  color: #38cc8c;
+  font-size: 2rem;
+  visibility: hidden; }
+
+.red-check {
+  color: #ff7a7a;
+  font-size: 2rem;
+  visibility: hidden; }
+
+.check {
+  position: absolute;
+  top: 11.6px;
+  right: 10px; }

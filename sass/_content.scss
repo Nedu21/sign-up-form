@@ -1,0 +1,145 @@
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-content: center;
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-row-gap: 4rem;
+  }
+
+  &__intro {
+    align-self: center;
+
+    @media only screen and (max-width: $bp-small) {
+      text-align: center;
+    }
+
+    &--heading {
+      line-height: 1.2;
+      font-weight: 600;
+      font-size: 4.2rem;
+
+      margin-bottom: 2rem;
+
+      @media only screen and (max-width: $bp-smallest) {
+        font-size: 3.8rem;
+      }
+    }
+  }
+
+  &__form {
+    width: 90%;
+    justify-self: end;
+
+    @media only screen and (max-width: $bp-small) {
+      margin: auto;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      width: 100%;
+    }
+    &--offer {
+      background-color: $color-blue;
+      width: 100%;
+      padding: 1.5rem 0;
+      border-radius: 5px;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: 500;
+      box-shadow: 0 6px 1px rgba(0, 0, 0, 0.2);
+
+      & span {
+        color: $color-grayish-blue;
+        font-weight: 300;
+      }
+    }
+    &--container {
+      background-color: $color-white;
+      width: 100%;
+      border-radius: 5px;
+      padding: 3rem;
+      box-shadow: 0 6px 1px rgba(0, 0, 0, 0.2);
+
+      @media only screen and (max-width: $bp-smallest) {
+        padding: 3rem 2rem;
+      }
+    }
+
+    &--control {
+      position: relative;
+      margin-bottom: 1.3rem;
+      padding-bottom: 2rem;
+
+      & span {
+        position: absolute;
+        bottom: 10;
+        right: 0;
+        visibility: hidden;
+      }
+
+      &.success input {
+        border-color: $color-green;
+      }
+
+      &.success .green-check {
+        visibility: visible;
+      }
+
+      &.error input {
+        border-color: $color-red;
+      }
+
+      &.error .red-check {
+        visibility: visible;
+      }
+
+      &.error span {
+        font-weight: 200;
+        color: $color-red;
+        visibility: visible;
+      }
+    }
+
+    &--input {
+      display: block;
+      font-weight: 200;
+      width: 100%;
+      padding: 1.3rem 0;
+      padding-left: 1.5rem;
+      border: 1.2px solid #000;
+      border-radius: 5px;
+
+      // Removes chrome styles when you use autofill on a form
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active {
+        box-shadow: 0 0 0 30px white inset !important;
+      }
+    }
+
+    &--btn {
+      background-color: $color-green;
+      color: $color-white;
+      text-transform: uppercase;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 5px;
+      border: none;
+      padding: 1.3rem 0;
+      margin-bottom: 2rem;
+      box-shadow: 0 6px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    &--text {
+      color: $color-grayish-blue;
+      font-weight: 300;
+      font-size: 1.2rem;
+      text-align: center;
+      & span {
+        color: $color-red;
+      }
+    }
+  }
+}

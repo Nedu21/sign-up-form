@@ -1,0 +1,72 @@
+// COLOR VARIABLES
+$color-white: #fff;
+
+// Primary
+$color-red: #ff7a7a;
+$color-green: #38cc8c;
+
+// Accent
+$color-blue: #6055a5;
+
+// Neutral
+$color-dark-blue: hsl(249, 10%, 26%);
+$color-grayish-blue: hsl(246, 25%, 77%);
+
+// FONT VARIABLES
+$font-primary: "Poppins", sans-serif;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 68.75em; // 1100px
+$bp-small: 50em; // 800px;
+$bp-smallest: 25em; // 400px;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+}
+
+body {
+  font-family: $font-primary;
+  color: $color-white;
+  background-color: $color-red;
+  background-image: url(/images/bg-intro-desktop.png);
+  //   background-repeat: no-repeat;
+  font-weight: 300;
+  font-size: 1.5rem;
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 1.3rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    background-image: url(/images/bg-intro-mobile.png);
+    font-size: 1.2.4rem;
+  }
+}
+
+#container {
+  //   height: max-content;
+  padding: 6rem 12rem;
+  max-width: 1440px;
+  margin: auto;
+
+  @media only screen and (max-width: $bp-largest) {
+    padding: 4rem 7.5rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 3rem 4rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    padding: 2.7rem;
+  }
+}

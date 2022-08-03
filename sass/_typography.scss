@@ -1,0 +1,17 @@
+.green-check {
+  color: $color-green;
+  font-size: 2rem;
+  visibility: hidden;
+}
+
+.red-check {
+  color: $color-red;
+  font-size: 2rem;
+  visibility: hidden;
+}
+
+.check {
+  position: absolute;
+  top: 11.6px;
+  right: 10px;
+}
